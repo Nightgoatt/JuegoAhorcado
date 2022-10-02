@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Ahorcado</title>
+    </head>
+    <body>
+        <header>
+            <img class="aluralogo" src="imagenes/alura logo.png" alt="alura logo">
+        </header>
+
+        <main>
+            <section>
+                <input class="btn-iniciar" type="submit" value="Iniciar Juego" id="btn-iniciar-func" onclick="playGame()"></input>
+                <button class="btn-agregar" id="btn-agregar-func">Agregar palabra</button>
+            </section>
+
+            <section id="palabra"></section>
+
+            <section>
+                <canvas id="canvas-0" class="main-area" width="900" height="600"></canvas>
+            </section>
+
+        </main>
+        
+        <footer>
+            <p class="Desarrollado">Desarrollado por Luis Méndez</p>
+        </footer>
+    </body>
+
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="canvas.js"></script>
+
+
+</html>

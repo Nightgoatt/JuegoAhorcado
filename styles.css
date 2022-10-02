@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: grey;
+}
+
+.aluralogo {
+    width: 60px;
+    height: 60px;
+}
+
+.main-area {
+    position: absolute;
+    left: 450px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    background-color: red;
+}
