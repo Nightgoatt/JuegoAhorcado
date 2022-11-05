@@ -1,3 +1,4 @@
+//Dibujar Horca.
 function drawGallow(val){
     pincel.lineWidth = 6;
     pincel.lineCap = "round";
@@ -66,6 +67,7 @@ function drawGallow(val){
     
 }
 
+//Dibujar guiones.
 function drawLines(){
     pincel.lineWidth = 5;
     pincel.lineCap = "round";
@@ -108,8 +110,9 @@ function drawIncorrectLetters(letra, errorsLeft){
     pincel.fillText(letra, 300 + (40 * (10 - errorsLeft)), 400, 40);
 }
 
+//Imprime mensaje de derrota.
 function lose(){
-    if (errors === 0) {
+    if (errors <= 0) {
     pincel.font = "30px Arial";
     pincel.lineWidth = 6;
     pincel.lineCap = "round";

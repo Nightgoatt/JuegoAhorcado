@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./CSS/reset.css">
+        <link rel="stylesheet" href="./CSS/styles.css">
         <title>Ahorcado</title>
     </head>
     <body>
@@ -15,8 +16,14 @@
         <main>
             <section>
                 <input class="btn-iniciar" type="submit" value="Iniciar Juego" id="btn-iniciar-func" onclick="playGame()"></input>
-                <button class="btn-agregar" id="btn-agregar-func">Agregar palabra</button>
+                <button class="btn-agregar" id="btn-agregar-func" onclick="saveWordScreen()">Agregar palabra</button>
             </section>
+
+            <section id="saveScreen">
+                <textarea id="usrWord" cols="30" rows="10"></textarea>
+                <button id="btn_agregar" onclick="saveWord()">Agregar</button>
+            </section>
+                
 
             <section id="palabra"></section>
 
@@ -31,8 +38,8 @@
         </footer>
     </body>
 
-    <script type="text/javascript" src="main.js"></script>
-    <script type="text/javascript" src="canvas.js"></script>
+    <script type="text/javascript" src="./JS/main.js"></script>
+    <script type="text/javascript" src="./JS/canvas.js"></script>
 
 
 </html>
