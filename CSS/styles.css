@@ -1,28 +1,64 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-    background-color: grey;
+	background-color: grey;
 }
 
 .aluralogo {
-    width: 60px;
-    height: 60px;
+	width: 60px;
+	height: 60px;
+}
+
+.save__Screen {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: red;
+}
+
+.main__saveScreen {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.usr__word {
+	border: none;
+	outline: none;
+	resize: none;
+	font-size: 2rem;
+}
+
+.btn__agregar {
+	width: 200px;
+	padding: 1rem;
+	margin: 0.5rem;
+	cursor: pointer;
+}
+
+.btn__init {
+	display: flex;
+	justify-content: center;
+	width: 200px;
+	padding: 1rem;
+	margin: 0.5rem;
 }
 
 .main-area {
-    position: absolute;
-    left: 450px;
+	position: absolute;
+	left: 450px;
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    padding: 5px;
-    height: 50px;
-    width: 100%;
-    text-align: center;
-    background-color: red;
+	position: absolute;
+	bottom: 0;
+	padding: 5px;
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	background-color: red;
 }

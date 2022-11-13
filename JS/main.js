@@ -3,6 +3,7 @@ let btnSave = document.querySelector('btn-agregar-func');
 let saveScrn = (document.getElementById('saveScreen').style.display = 'none');
 
 let palabras = ['javascript', 'purpura', 'casa', 'html', 'automata', 'gundam', 'azul'];
+console.log(palabras);
 let hiddenWord = '';
 let correctWord = [];
 
@@ -36,6 +37,7 @@ function adicionarLetraCorrecta(i) {
 //Inicia el estado del juego.
 function playGame() {
 	document.getElementById('btn-iniciar-func').style.display = 'none';
+	document.getElementById('btn-agregar-func').style.display = 'none';
 
 	secretWord();
 	drawLines();
@@ -115,10 +117,28 @@ function saveWordScreen() {
 	document.getElementById('saveScreen').style.display = 'block';
 	document.getElementById('btn-agregar-func').style.display = 'none';
 	document.getElementById('btn-iniciar-func').style.display = 'none';
+	document.getElementById('canvas-0').style.display = 'none';
+	document.getElementById('usrWord').focus();
 }
 
 //Guarda la palabra.
-function saveWord(word) {
+const saveWord = () => {
 	let usrInput = document.getElementById('usrWord').value;
-	console.log(usrInput);
-}
+	localStorage.setItem('new_Word', JSON.stringify(usrInput));
+	const newWord = JSON.parse(localStorage.getItem('new_Word')) || [];
+
+	const col = JSON.parse(localStorage.getItem('arr')) || [];
+
+	palabras.push(newWord);
+	localStorage.setItem('arr', JSON.stringify(palabras));
+
+	localStorage.setItem('arr', JSON.stringify(palabras));
+	console.log(palabras);
+};
+
+//vuelve a mostrar el canvas al iniciar la función "playGame".
+const initGame = () => {
+	document.getElementById('saveScreen').style.display = 'none';
+	playGame();
+	document.getElementById('canvas-0').style.display = 'block';
+};

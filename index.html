@@ -19,9 +19,13 @@
                 <button class="btn-agregar" id="btn-agregar-func" onclick="saveWordScreen()">Agregar palabra</button>
             </section>
 
-            <section id="saveScreen">
-                <textarea id="usrWord" cols="30" rows="10"></textarea>
-                <button id="btn_agregar" onclick="saveWord()">Agregar</button>
+            <section class="save__Screen" id="saveScreen">
+                <div class="main__saveScreen">
+                    <textarea class="usr__word" id="usrWord" cols="40" rows="5" placeholder="Ingrese una palabra"></textarea>
+                    <button class="btn__agregar" id="btn_agregar" onclick="saveWord()">Agregar</button>
+                    <button class="btn__init" id="btn_init" onclick="initGame()">Iniciar Juego</button>
+                </div>
+                
             </section>
                 
 
