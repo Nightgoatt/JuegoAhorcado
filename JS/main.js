@@ -117,12 +117,13 @@ function saveWordScreen() {
 	document.getElementById('saveScreen').style.display = 'block';
 	document.getElementById('btn-agregar-func').style.display = 'none';
 	document.getElementById('btn-iniciar-func').style.display = 'none';
-	document.getElementById('canvas-0').style.display = 'none';
+	document.getElementById('canvas-0').style.display = 'block';
 	document.getElementById('usrWord').focus();
 }
 
 //Guarda la palabra.
 const saveWord = () => {
+	const u = JSON.parse(localStorage.getItem('arr'));
 	let usrInput = document.getElementById('usrWord').value;
 	localStorage.setItem('new_Word', JSON.stringify(usrInput));
 	const newWord = JSON.parse(localStorage.getItem('new_Word')) || [];
@@ -132,7 +133,6 @@ const saveWord = () => {
 	palabras.push(newWord);
 	localStorage.setItem('arr', JSON.stringify(palabras));
 
-	localStorage.setItem('arr', JSON.stringify(palabras));
 	console.log(palabras);
 };
 

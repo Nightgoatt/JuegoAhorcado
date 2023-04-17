@@ -75,8 +75,8 @@ function drawLines() {
 
 	let espacio = 900 / hiddenWord.length;
 	for (let i = 0; i < hiddenWord.length; i++) {
-		pincel.moveTo(15 + espacio * i, 500);
-		pincel.lineTo(60 + espacio * i, 500);
+		pincel.moveTo(30 + espacio * i, 500);
+		pincel.lineTo(80 + espacio * i, 500);
 	}
 
 	pincel.stroke();
@@ -92,7 +92,7 @@ function drawCorrectLetters(index) {
 	pincel.fillStyle = 'red';
 
 	let espacio = 900 / hiddenWord.length;
-	pincel.fillText(hiddenWord[index], 25 + espacio * index, 470);
+	pincel.fillText(hiddenWord[index], 40 + espacio * index, 470);
 	pincel.stroke();
 }
 
@@ -103,7 +103,7 @@ function drawIncorrectLetters(letra, errorsLeft) {
 	pincel.lineCap = 'round';
 	pincel.lineJoin = 'round';
 	pincel.fillStyle = 'red';
-	pincel.fillText(letra, 300 + 40 * (10 - errorsLeft), 400, 40);
+	pincel.fillText(letra, 180 + 40 * (10 - errorsLeft), 400, 40);
 }
 
 //Imprime mensaje de derrota.
